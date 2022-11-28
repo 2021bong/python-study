@@ -8,6 +8,8 @@
 
 <br />
 
-- [ ] variable - Object References
+- [ ] ch2_variable (Object References)
       <br />
-- [ ] variable - id
+- [ ] ch2_variable (id)
+      <br />
+- [ ] ch6_tuple (Packing & Unpacking)
