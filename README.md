@@ -12,15 +12,19 @@
 
   <br />
 
-- [ ] ch2_variable (Object References)
+- [ ] ch2_variable : (Object References)
       <br />
-- [ ] ch2_variable (id)
+- [ ] ch2_variable : (id)
       <br />
-- [ ] ch6_tuple (Packing & Unpacking)
+- [ ] ch6_tuple : (Packing & Unpacking)
+      <br />
+- [ ] ch9_if : (파이썬은 || 나 ?? 가 뭘까..?)
       <br />
       <br />
 
-- [ ] level 0\_옹알이 (&연산자)
+- [x] level 0\_옹알이 : (&연산자)
+      <br />
+- [ ] level0 OX퀴즈 : (eval)
       <br />
 
 ---
