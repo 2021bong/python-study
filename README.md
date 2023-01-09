@@ -26,6 +26,8 @@
       <br />
 - [ ] level 0 OX퀴즈 : (eval)
       <br />
+- [ ] level 0 등수 매기기 : (Lazy evaluation)
+      <br />
 
 ---
 
@@ -41,7 +43,7 @@
       <br />
 - [ ] level 0 다항식 더하기 : 5, 8, 12 케이스 실패 (JS && python)
       <br />
-- [ ] level 0 등수 매기기 : 3, 6 케이스 실패 (python)
+- [x] level 0 등수 매기기 : js로 풀고 다른 사람 코드 참고해서 통과 (python)
       <br />
 - [ ] level 0 유한소수 판별하기 : 6, 7, 11, 20, 24, 25, 43, 45 케이스 실패 (python)
       <br />
