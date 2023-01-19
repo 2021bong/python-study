@@ -18,8 +18,10 @@
 # 다른 사람 풀이 참고
 def solution(M, N):
   return M * N - 1
+# https://nahwasa.com/entry/%EC%9E%90%EB%B0%94-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A2%85%EC%9D%B4-%EC%9E%90%EB%A5%B4%EA%B8%B0-Lv0-Java
+# 알고리즘적 무언가가 있나 했더니 그냥 규칙성을 찾는 것... 이해가 안갔는데 이 링크를 보니 이해가 갔다..
   
-print(solution(2, 2))
-print(solution(2, 5))
-print(solution(1, 1))
-print(solution(1, 9))
+# print(solution(2, 2))
+# print(solution(2, 5))
+# print(solution(1, 1))
+# print(solution(1, 9))
