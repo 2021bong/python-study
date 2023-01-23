@@ -27,7 +27,43 @@
 
 case1 = ["aya", "yee", "u", "maa", "wyeoo"];
 case2 = ["ayaye", "uuuma", "ye", "yemawoo", "ayaa"];
+case3 = ["ayaaya", "wooaya", 'yayae', 'woyeo', 'yewmaya' ];
 
+# 첫번째 풀이 (케이스 6, 7 통과 못함)
+# def solution(babbling):
+#   can = ["aya", "ye", "woo", "ma"]
+#   newbabbling = [];
+  
+#   for i in babbling:
+#     if len(i) <= 10 and len(i) >= 2:
+#       newbabbling.append(i)
+
+#   for i, value in enumerate(newbabbling):
+#     for j in can: 
+#       if value.find(j) != -1 :
+#         newbabbling[i] = newbabbling[i].replace(j, '')
+#   answer = [];
+#   for i in newbabbling:
+#     if len(i) == 0:
+#       answer.append(i)
+  
+#   return len(answer);
+
+
+# 다른 사람 풀이 참고
+def solution(babbling):
+  can = ["aya", "ye", "woo", "ma"]
+  ans = 0
+  for i in babbling:
+    for j in can: 
+      i = i.replace(j, '?')
+    if i.replace('?','') == '':
+      ans += 1
+  return ans
+
+# 빈문자열('')로 치환해버렸을 때 'yayae'같은 단어가 불가능한 발음으로 세어져야하는데 발음되는 단어로 세져서 그런 것 같음
+# JS에서는 '?'로 바꾼 뒤에 ''로 바꿨기 때문에 통과가 된 것 같음
+# 머리를 굴려서 예외케이스 단어를 만들어 넣어도 잘 되는데 대체 6,7번 케이스 단어가 뭘까....?
 def solution(babbling):
   can = ["aya", "ye", "woo", "ma"]
   newbabbling = [];
@@ -39,15 +75,17 @@ def solution(babbling):
   for i, value in enumerate(newbabbling):
     for j in can: 
       if value.find(j) != -1 :
-        newbabbling[i] = newbabbling[i].replace(j, '')
-  answer = [];
+        newbabbling[i] = newbabbling[i].replace(j, '?')
+  answer = 0;
   for i in newbabbling:
-    if len(i) == 0:
-      answer.append(i)
+    if i.replace('?','') == '':
+      answer += 1
   
-  return len(answer);
+  return answer;
 
-# 파이썬 테스트 케이스 6, 7 통과 못함
+# print(solution(case1))
+# print(solution(case2))
+# print(solution(case3))
 
 
 
