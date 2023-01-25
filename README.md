@@ -27,7 +27,17 @@
 - [ ] level 0 OX퀴즈 : (eval)
       <br />
 - [ ] level 0 등수 매기기 : (Lazy evaluation)
-      <br />
+    <br />
+
+<br />
+
+#### 기타
+
+  <br />
+
+- [ ] 파이썬 네이밍 컨벤션
+
+<br />
 
 ---
 
