@@ -30,6 +30,8 @@
       <br />
 - [ ] level 0 등수 매기기 : (Lazy evaluation)
       <br />
+- [ ] level 1 삼총사 : itertools 라이브러리
+      <br />
 
 <br />
 
