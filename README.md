@@ -32,6 +32,8 @@
       <br />
 - [ ] level 1 삼총사 : itertools 라이브러리
       <br />
+- [ ] level 1 두 개 뽑아서 더하기 : combinations()
+      <br />
 
 <br />
 
