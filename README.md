@@ -34,6 +34,8 @@
       <br />
 - [ ] level 1 두 개 뽑아서 더하기 : combinations()
       <br />
+- [ ] level 1 2016년 : datetime 모듈
+      <br />
 
 <br />
 
