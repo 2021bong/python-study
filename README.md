@@ -36,6 +36,8 @@
       <br />
 - [ ] level 1 2016년 : datetime 모듈
       <br />
+- [ ] level 1 폰켓몬 : len을 사용할 수 있는 데이터 타입은?
+      <br />
 
 <br />
 
