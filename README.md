@@ -42,6 +42,8 @@
       <br />
 - [ ] level 1 명예의 전당 (1) : 힙, heapq 모듈
       <br />
+- [ ] level 1 완주하지 못한 선수 : collections 모듈
+      <br />
 
 <br />
 
