@@ -19,12 +19,12 @@ def send_email():
     smtp = smtplib.SMTP_SSL(gmail_smtp, gmail_port)
 
     # 로그인
-    my_account = "my_email@gmail.com"
-    my_password = "App password"
+    my_account = "from_email@gmail.com"
+    my_password = "app password"
     smtp.login(my_account, my_password)
 
     # 메일을 받을 계정
-    to_mail = "your_email@gmail.com"
+    to_mail = "to_email@gmail.com"
 
     # 메일 기본 정보 설정
     msg = MIMEMultipart()
@@ -34,62 +34,16 @@ def send_email():
 
     # 메일 본문 내용
     mytext = '''
-  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-  <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>{이메일 제목}</title>
-      <style>
-        .list-item {
-          margin-bottom: 10px;
-          font-size: 20px;
-        }
-
-        .list-item:first-child {
-          font-weight: 700;
-        }
-      </style>
-    </head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{이메일 제목}</title>
     <body>
-      <table
-        border="0"
-        cellpadding="0"
-        cellspacing="0"
-        width="50%"
-        style="text-align: center"
-      >
-        <tr>
-          <td style="padding-bottom: 20px">
-            <b>안녕하세요 {이용자}님!</b> 😊 잘 지내고 계신가요?<br />
-          </td>
-        </tr>
-        <tr>
-          <td style="height: 300px; background-color: yellow">
-            <ul>
-              <p class="list-item">{당신}에게 추천 하는 목록</p>
-              <li class="list-item">기분좋을 땐 파이썬</li>
-              <li class="list-item">알고리즘엔 파이썬</li>
-              <li class="list-item">인공지능엔 파이썬</li>
-              <li class="list-item">파이썬 최고</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-top: 20px">남은 2023년도 화이팅💪<br /></td>
-        </tr>
-        <tr>
-          <td style="width: 500px">
-            <img
-              style="width: 100%; margin-top: 20px"
-              src="https://www.mangoboard.net/images/main/contents/templt_hbanner_img08.jpg"
-              alt="배너 이미지"
-            />
-          </td>
-        </tr>
-      </table>
     </body>
-  </html>
+</html>
+
 '''
     htmltext = MIMEText(
         mytext, 'html')  # html을 넣어서 보낼때는 타입을 지정해서 MIMEText을 사용해야하는 듯
