@@ -44,6 +44,8 @@
       <br />
 - [ ] level 1 완주하지 못한 선수 : collections 모듈
       <br />
+- [ ] level 1 행렬의 덧셈 : 행렬 계산에는 numpy ?
+      <br />
 
 <br />
 
