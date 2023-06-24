@@ -36,5 +36,10 @@ for i in range(len(json_arr)):
 # to_email = "to_email@gmail.com"
 
 
-def process_data():
-    return "text"
+def process_data(data_dict):
+    process_data = {}
+    process_data["name"] = data_dict.nickname
+    process_data["email"] = data_dict.email
+    process_data["fortune"] = int(data_dict.fortune)
+    process_data["goals"] = data_dict.goals
+    return process_data

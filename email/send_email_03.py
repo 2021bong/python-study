@@ -1,14 +1,17 @@
-def send_email(name, input_text, to_email):
+def send_email(name, html_text, to_email):
     import smtplib
     import re
-    from email.mime.multipart import MIMEMultipart
-    from email.mime.text import MIMEText
+    from email.message import EmailMessage
 
     def sendEmail(addr):
         reg = "^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$"
         if re.match(reg, addr):
-            smtp.sendmail(my_account, to_mail, msg.as_string())
-            print(to_mail, ' | ', "정상적으로 메일이 발송되었습니다.")
+            try:
+                smtp.send_message(msg)
+                print(to_mail, ' | ', "정상적으로 메일이 발송되었습니다.")
+            except Exception as e:
+                print(to_mail, ' | ', "! 메일을 발송하는 도중 에러가 발생했습니다.")
+                print(e)
         else:
             print(to_mail, ' | ', "받으실 메일 주소를 정확히 입력하십시오.")
 
@@ -26,7 +29,7 @@ def send_email(name, input_text, to_email):
     to_mail = to_email
 
     # 메일 기본 정보 설정
-    msg = MIMEMultipart()
+    msg = EmailMessage()
     msg["Subject"] = "안녕하세요! {0}님. 새해를 맞이하면서 세웠던 계획들 기억하시나요?".format(
         name)  # 메일 제목
     # msg["Subject"] = "test email bg version"  # test용 메일 제목
@@ -34,9 +37,7 @@ def send_email(name, input_text, to_email):
     msg["To"] = to_mail
 
     # 메일 본문 내용
-    htmltext = MIMEText(
-        input_text, 'html')  # html을 넣어서 보낼때는 타입을 지정해서 MIMEText을 사용해야하는 듯
-    msg.attach(htmltext)
+    msg.add_alternative(html_text, subtype='html')
 
     # 받는 메일 유효성 검사 거친 후 메일 전송
     sendEmail(to_mail)
