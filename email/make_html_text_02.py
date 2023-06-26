@@ -97,7 +97,7 @@ def make_html_text(name, fortune, list):
       border-radius: 4px;"></div></td></tr>'''.format(card_img, fortune_for_kor, fortune_desc)
     goal_list = ''
     for i, text in enumerate(list):
-        if (i == 0):
+        if (i == 0 and len(list) > 1):
             goal_list += '''<li style="margin: 0;
             padding: 0;
             list-style: none;
@@ -108,7 +108,7 @@ def make_html_text(name, fortune, list):
     line-height: 24px;
             border-bottom: 1px solid #79A8D6; padding-top: 0;">{0}</li>'''.format(
                 text)
-        elif (i == len(list) - 1):
+        elif (i == len(list) - 1 and len(list) > 1 or len(list) == 1):
             goal_list += '''<li style="margin: 0;
             padding: 0;
             list-style: none;
@@ -117,7 +117,7 @@ def make_html_text(name, fortune, list):
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-            border-bottom: 1px solid #fff; margin-bottom: 36px;
+            margin-bottom: 36px;
             padding-bottom: 0;
             border: none;">{0}</li>'''.format(text)
         else:

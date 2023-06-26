@@ -4,7 +4,7 @@ def send_email(name, html_text, to_email):
     from email.message import EmailMessage
 
     def sendEmail(addr):
-        reg = "^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$"
+        reg = "^[a-zA-Z0-9.+_-]+@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([0-9a-zA-Z]{2,})(\]?)$"
         if re.match(reg, addr):
             try:
                 smtp.send_message(msg)
