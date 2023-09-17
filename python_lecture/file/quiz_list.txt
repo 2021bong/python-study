@@ -1,0 +1,5 @@
+PYTHON, program language
+JAVA, program language
+BANANA, fruit
+COFFEE, drink
+CAT, animal

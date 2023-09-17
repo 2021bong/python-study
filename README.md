@@ -22,6 +22,8 @@
       <br />
 - [ ] ch15_module : sys, time 모듈
       <br />
+- [ ] ch21_hangman : 사운드 모듈 (winsound X)
+      <br />
       <br />
 
 - [x] level 0 옹알이 : (&연산자)
