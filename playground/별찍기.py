@@ -4,8 +4,9 @@
 #   star += '*';
 # }
 
-star = '*'
+def star():
+  star = '*'
 
-for i in range(5):
-  print(star)
-  star += '*'
+  for i in range(5):
+    print(star)
+    star += '*'

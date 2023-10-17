@@ -15,10 +15,11 @@ sys.path.append('/Users/bong-wonhui/Documents/MyProject/python-study')
 # \*로 import하는 것은 불필요하게 많은 것을 가져오므로 되도록 사용하지 않는 것이 좋다.
 # \*로 가져오면 하위에 있는 모든 파일 이름으로 접근 가능하다
 
-import ch15_module
+# import ch15_module
 from ch_test.ch16_test import ch16_test
-from playground import 별찍기 as star
+from playground import 별찍기
 ch16_test()
+별찍기.star()
 
 # __init__.py
 # 파이썬 3.3부터는 없어도 패키지로 인식 -> 하위 호환을 위해 작성 추천
